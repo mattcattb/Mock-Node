@@ -26,9 +26,12 @@
     "dotenv": "^17.0.1",
     "drizzle-kit": "latest",
     "drizzle-orm": "^0.44.2",
+    "drizzle-zod": "^0.8.2",
     "eslint-plugin-drizzle": "^0.2.3",
     "hono": "^4.8.4",
+    "hono-pino": "^0.9.1",
     "pg": "^8.16.3",
+    "pino": "^9.7.0",
     "pino-pretty": "^13.0.0",
     "postgres": "^3.4.7",
     "zod": "^4.0.5"
