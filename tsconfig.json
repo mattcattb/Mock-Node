@@ -1,6 +1,14 @@
 {
-  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "verbatimModuleSyntax": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": false,
+    "noFallthroughCasesInSwitch": true,
     "lib": ["ESNext"],
     "outDir": "./dist",
     "rootDir": "./src",
