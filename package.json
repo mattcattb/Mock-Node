@@ -21,19 +21,17 @@
   },
   "dependencies": {
     "@hono/zod-validator": "^0.7.0",
-    "@reroll/eslint-config": "workspace:^",
     "decimal": "^0.0.2",
     "decimal.js": "^10.6.0",
     "dotenv": "^17.0.1",
     "drizzle-kit": "latest",
-    "drizzle-orm": "workspace:*",
-    "drizzle-zod": "workspace:*",
+    "drizzle-orm": "^0.44.2",
     "eslint-plugin-drizzle": "^0.2.3",
-    "hono": "workspace:*",
+    "hono": "^4.8.4",
     "pg": "^8.16.3",
     "pino-pretty": "^13.0.0",
     "postgres": "^3.4.7",
-    "zod": "workspace:*"
+    "zod": "^4.0.5"
   },
   "devDependencies": {
     "@types/node": "^24.0.10",
