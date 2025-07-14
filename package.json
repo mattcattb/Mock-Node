@@ -1,0 +1,45 @@
+{
+  "name": "@reroll/mock-node",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "build": "tsc --build",
+    "start": "bun dist/index.js",
+    "typecheck": "bun tsc --noEmit",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "provision": "bun run ./src/scripts/provision.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push --force",
+    "db:migrate": "drizzle-kit migrate",
+    "db:wipe": "bun run ./src/scripts/wipe-db.ts",
+    "db:truncate": "bun run ./src/scripts/truncate-db.ts",
+    "startup:reset": "bun run db:migrate && bun run db:truncate && bun run provision",
+    "db:reset": "bun run db:truncate && bun run provision",
+    "db:reset:full": "bun run db:wipe && bun run db:migrate && bun run provision"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.0",
+    "@reroll/eslint-config": "workspace:^",
+    "decimal": "^0.0.2",
+    "decimal.js": "^10.6.0",
+    "dotenv": "^17.0.1",
+    "drizzle-kit": "latest",
+    "drizzle-orm": "workspace:*",
+    "drizzle-zod": "workspace:*",
+    "eslint-plugin-drizzle": "^0.2.3",
+    "hono": "workspace:*",
+    "pg": "^8.16.3",
+    "pino-pretty": "^13.0.0",
+    "postgres": "^3.4.7",
+    "zod": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.10",
+    "@types/pg": "^8.15.4",
+    "bun-types": "^1.2.18",
+    "drizzle-kit": "^0.31.4",
+    "tsx": "^4.20.3"
+  }
+}
